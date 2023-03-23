@@ -14,26 +14,25 @@
 }
 .priceс {
     position: absolute;
-		font-family: 'Arial', sans-serif;
-    right: 0; 
+    font-family: 'Arial', sans-serif;
+    right: 0;
     bottom: 0;
-     
-    color:#000;
+    color: #000;
     box-shadow: rgba(0, 0, 0, 0.8) 0px 3px 30px;
-    width: 165px;
-    height: 98px;
+    width: 155px;
+    height: 89px;
     text-align: center !important;
     font-size: 19px;
     font-weight: bold;
     line-height: 1.3;
     transform: rotateZ(-7deg);
-    margin: -0px auto 0px;
+    margin: 0px auto 0px;
     background: linear-gradient(to right, rgb(238, 165, 19) 0%, rgb(253, 237, 19) 100%);
     border-width: 2px;
     border-style: solid;
     border-color: rgb(255, 255, 255);
     border-image: initial;
-    border-radius: 19%;  
+    border-radius: 19%;
 }
  span.discountс {
     display: block;
@@ -107,4 +106,10 @@
     padding-top: 15px; 
     text-align: center; 
     font-size: 22px;
+}
+.time-to-lose{
+    display: initial;
+    color: red;
+    font-size: 23px;
+    font-weight: 600;
 }

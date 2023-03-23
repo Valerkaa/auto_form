@@ -1,0 +1,25 @@
+.error-name {
+    display: none;
+  }
+
+  .error-lastname {
+    display: none;
+  }
+
+  .error-email {
+    display: none;
+  }
+
+  .error-number {
+    display: none;
+  }
+
+  .form-send .activeGood {
+    color: #fff;
+    background: #5ec849;
+  }
+
+  .form-send .activeBad {
+    color: #fff;
+    background: rgba(255, 0, 0, 0.6) !important;;
+  }

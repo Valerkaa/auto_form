@@ -5,39 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="features_files/css/autoComments.css" />
-    <link rel="stylesheet" href="features_files/css/formStyles.css" />
-    <link rel="stylesheet" href="features_files/css/popups.css" />
-    <link rel="stylesheet" href="features_files/css/wheel.css" />
-    <script src="drewlex.js"></script>
   </head>
   <body>
+   
 <div class="features-wrapper"></div>
-    <script id="formBlockGenerated">
-        initFeatures({
-        lang : 'ru', //список доступных языков - vn,it,es,co,hr,en,de,fr,ph,cz,id,th,gr,bg,al,ro,sg,en_sg,mk,si,sk,lv,hu,pl,lt,pt
-        product : 'Bebek', //название продукта
-        priceMain: 2.5,
-        currencyMain:.25,
-        genderTargetting : 'all', //пол целевой аудитории - all, male, female
-            
-        form : {
-        isNeeded : 1, // 1-включить форму, 0-выключить
-        subs:`
-							<input type="hidden" name="sub1" value="{subid}"/>
-      				<input type="hidden" name="sub2" value="{landing_id}"/>
-      				<input type="hidden" name="sub3" value="{sub_id_3}"/>
-      				<input type="hidden" name="px" value="{px}"/>
-      				<input type="hidden" name="country" value="{country_code}"/>`, //если вам нужно добавлять в форму сабы
-						orderScript: 'build/api.php', //путь к файлу отправки лидов
-        img: 'img/product.png', // путь до картинки продукта
-        price : true, // плашка с ценой
-        priceBrFix : true, // фиксит отображение цен в ценике (true - уберает перенос строки)
-        showSelect : false, // показывать или скрывать поле select
-        
-        untilExpire : 600 // таймер окончания акции где 600 = 10мин. Ставим 0 если таймер не нужен.
-        }
-        });
-        </script>
+
+<script src="bug_files/connect.js" id="newAfterId"></script>
   </body>
 </html>
