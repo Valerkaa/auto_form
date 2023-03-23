@@ -177,7 +177,7 @@ $offerNameApi = trim($_SERVER[REQUEST_URI],"/lander");
 $offerName = trim($offerNameApi,"/api.php");
 //Telegram
 $tsend = array(
-    "NEW LEAD in ID "."$id_offer"."!!\n",
+    "NEW DRCASH LEAD in ID "."$id_offer"."!!\n",
     "\n😈campaign:", "$offerName",
     "\n😈name:", "$name ",
     "\n😈phone:", "$tphone",

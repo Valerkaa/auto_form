@@ -49,7 +49,7 @@ scriptiks({
 
 
   //Тут глобальные настройки!!
-lang : 'ru', //список доступных языков - vn,it,es,co,hr,en,de,fr,ph,cz,id,th,gr,bg,al,ro,sg,en_sg,mk,si,sk,lv,hu,pl,lt,pt,ua
+lang : 'ua', //список доступных языков - vn,it,es,co,hr,en,de,fr,ph,cz,id,th,gr,bg,al,ro,sg,en_sg,mk,si,sk,lv,hu,pl,lt,pt,ua
 product : 'Erom', //название продукта на нужном языке
 priceMain: 550 + "грн", // цена первоначальная + "валюта которая нужна"
 currencyMain: 25 + "грн", // цена со скидкой  + "валюта которая нужна"
@@ -59,9 +59,9 @@ genderTargetting : 'all', // пол целевой аудитории - all, mal
     isNeeded : 1, // 1-включить форму, 0-выключить    
     img: 'img/product.png', // путь до картинки продукта
     price : true, // Показывать цену на продукте, если нет false
-    pp: "CPAecom", //Укажи пп
-    stream_key: "XyuZalupa",
-    id_offer : 54,
+    pp: "CPAecom", //Укажи пп DrCash || CPAecom
+    stream_key: "XyuZalupa",// Стрим кей из пп
+    id_offer : 54, // Ввести айди офера
     },
 
     //Настройки колеса
@@ -79,7 +79,7 @@ genderTargetting : 'all', // пол целевой аудитории - all, mal
   //Настройки колеса
   wheel: {
     isNeeded: 1, // 1-включить колесо, 0-выключить
-    customWheel: 'bug_files/img/prizewheel3.png' // ссылка на свое колесо, либо false
+    customWheel: 'bug_files/img/prizewheel11.png'  // ссылка на свое колесо, либо fals
 }
 
 });
