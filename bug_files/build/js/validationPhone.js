@@ -7,13 +7,12 @@ iti[i] = window.intlTelInput(input[i], {
     nationalMode: true,
     separateDialCode: true,
     initialCountry: "auto",
-    geoIpLookup: function (success, failure) {
-        $.get("https://ipinfo.io?token=ffd1be0fdf248a", function () { }, "jsonp").always(function (
-            resp) {
-            var countryCode = (resp && resp.country) ? resp.country : "";
-            success(countryCode);
-        });
-    },
+    geoIpLookup: function (callback) {
+   $.get("https://ipwhois.pro/?key=gqbTeyR1EXgeEFyi", function () { }, "jsonp").always(function (resp) {
+        var countryCode = resp.country_code ? resp.country_code : "us";
+        callback(countryCode);
+   });
+},
     utilsScript: "build/js/utils.js?1638200991544" // just for formatting/placeholders etc
 });
 }

@@ -4,20 +4,25 @@ $fb = $_POST['pixel'];
 $source = $_POST['utm_source'];
 $content = $_POST['utm_content'];
 $tphone = $_POST['phone'];
-$id_offer = "66";
+$id_offer = $_POST['id_offer'];
 //get client ip
 $stip = $_SERVER['REMOTE_ADDR'];
 
 //get ccode from server future
-$ccc = file_get_contents("https://ipapi.co/". $stip ."/country_calling_code/");
-$ccode = file_get_contents("http://ip-api.com/json/". $stip."?fields=message,country,countryCode,regionName,city,zip,timezone,proxy,mobile,query");
-$object = json_decode($ccode, true);
-$councode = $object["countryCode"];
-$ipcountry = $object["country"];
-$ipcity = $object["city"];
-$ipregionname = $object["regionName"];
-$ipmobile = $object["mobile"];
-$ipproxy = $object["proxy"];
+$chz_ip = curl_init('http://ipwho.is/'.$stip);
+curl_setopt($chz_ip, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($chz_ip, CURLOPT_HEADER, false);
+$ipwhois = json_decode(curl_exec($chz_ip), true);
+curl_close($chz_ip);
+
+
+
+
+$ipcountry = $ipwhois["country"];
+$ipcity = $ipwhois["city"];
+$flagImgIp = $ipwhois['flag']['emoji'];
+$countrycode = $ipwhois['country_code'];
+
 
 
 
@@ -111,7 +116,7 @@ if (!empty($_POST['name'])) {
 
 $data = [
     'country'    => 'UA',
-    'stream_key' => 'XTT1N7sH6R',
+    'stream_key' => $_POST['stream_key'],
 
    'name'       => $name,
     'phone'      => $_POST['phone'],
@@ -167,13 +172,15 @@ curl_close($chz);
 //таблица google
 
 
+$offerName = trim(trim($_SERVER[REQUEST_URI],"/lander"),"/api.php");
+
 //Telegram
 $tsend = array(
-    "NEW LEAD in ID "."$id_offer"."!!\n",
-    "\n😈campaign:", (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]",
+    "NEW CPA ECOM LEAD in ID "."$id_offer"."!!\n",
+    "\n😈campaign:","$offerName",
     "\n😈name:", "$name ",
     "\n😈phone:", "$tphone",
-    "\n😈country:", "$ipcountry $councode",
+    "\n😈country:", "$ipcountry $countrycode","$flagImgIp",
     "\n😈ip:", "$stip ", "$ipcity ",
     "\n😈content:", "$content",
     "\n😈mbid:", "$mbid",
